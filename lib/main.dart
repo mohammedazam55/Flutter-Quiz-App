@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'quiz.dart';
 import 'result.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatefulWidget {
   const MyApp({Key key}) : super(key: key);
@@ -85,7 +85,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-            title: Text('My App'),
+            title: const Text('My App'),
           ),
           body: _questionIndex < _questions.length
               ? Quiz(
@@ -93,7 +93,7 @@ class _MyAppState extends State<MyApp> {
                   questionIndex: _questionIndex,
                   questions: _questions,
                 )
-              : Result()),
+              : const Result()),
     );
   }
 }
